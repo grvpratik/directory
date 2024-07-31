@@ -1,9 +1,69 @@
-import React from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
-const Sidebar = () => {
-  return (
-    <div>Sidebar</div>
-  )
+interface SidebarItem {
+	href: string;
+	label: string;
+	icon: React.ReactNode;
+	badgeText?: string;
+	badgeColor?: string;
 }
 
-export default Sidebar
+interface SidebarProps {
+	children: React.ReactNode;
+	items: SidebarItem[];
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ children, items }) => {
+	return (
+		<main>
+			<aside
+				id="logo-sidebar"
+				className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+				aria-label="Sidebar"
+			>
+				<div className="h-full px-3 py-4 overflow-y-auto  ">
+					<a href="#" className="flex items-center gap-2 py-4 ">
+						<Image
+							src="images/icon.svg"
+							height={40}
+							width={40}
+							className=""
+							alt="Directory"
+						/>
+						<span className="self-center text-xl font-semibold font-heading whitespace-nowrap">
+							Directory
+						</span>
+					</a>
+					<div className="space-y-2 text-sm px-1 my-3">All categories</div>
+					<ul className="space-y-2 font-medium">
+						{items.map((item, index) => (
+							<li key={index}>
+								<Link
+									href={item.href}
+									className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-accent  group"
+								>
+									{item.icon}
+									<span className="ms-3">{item.label}</span>
+									{item.badgeText && (
+										<span
+											className={`inline-flex items-center justify-center px-2 ms-3 text-sm font-medium  ${
+												item.badgeColor ? item.badgeColor : "bg-gray-100"
+											} rounded-full`}
+										>
+											{item.badgeText}
+										</span>
+									)}
+								</Link>
+							</li>
+						))}
+					</ul>
+				</div>
+			</aside>
+			<div className="sm:ml-64 ">{children}</div>
+		</main>
+	);
+};
+
+export default Sidebar;
