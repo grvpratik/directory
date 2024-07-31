@@ -4,65 +4,197 @@
 
 @layer base {
   :root {
+    /* Background color (white) */
     --background: 0 0% 100%;
+    /* White */
+
+    /* Foreground color (very dark gray) */
     --foreground: 0 0% 3.9%;
+    /* Very dark gray, close to black */
+
+    /* Card background color (white) */
     --card: 0 0% 100%;
+    /* White */
+
+    /* Card foreground color (very dark gray) */
     --card-foreground: 0 0% 3.9%;
+    /* Very dark gray, close to black */
+
+    /* Popover background color (white) */
     --popover: 0 0% 100%;
+    /* White */
+
+    /* Popover foreground color (very dark gray) */
     --popover-foreground: 0 0% 3.9%;
+    /* Very dark gray, close to black */
+
+    /* Primary color (very dark gray) */
     --primary: 0 0% 9%;
+    /* Very dark gray, close to black */
+
+    /* Primary foreground color (very light gray) */
     --primary-foreground: 0 0% 98%;
+    /* Very light gray, close to white */
+
+    /* Secondary color (light gray) */
     --secondary: 0 0% 96.1%;
+    /* Light gray */
+
+    /* Secondary foreground color (dark gray) */
     --secondary-foreground: 0 0% 9%;
+    /* Very dark gray, close to black */
+
+    /* Muted color (light gray) */
     --muted: 0 0% 96.1%;
+    /* Light gray */
+
+    /* Muted foreground color (medium gray) */
     --muted-foreground: 0 0% 45.1%;
+    /* Medium gray */
+
+    /* Accent color (light gray) */
     --accent: 0 0% 96.1%;
+    /* Light gray */
+
+    /* Accent foreground color (dark gray) */
     --accent-foreground: 0 0% 9%;
+    /* Very dark gray, close to black */
+
+    /* Destructive color (bright red) */
     --destructive: 0 84.2% 60.2%;
+    /* Bright red */
+
+    /* Destructive foreground color (white) */
     --destructive-foreground: 0 0% 98%;
+    /* White */
+
+    /* Border color (light gray) */
     --border: 0 0% 89.8%;
+    /* Light gray */
+
+    /* Input background color (light gray) */
     --input: 0 0% 89.8%;
+    /* Light gray */
+
+    /* Ring color (very dark gray) */
     --ring: 0 0% 3.9%;
+    /* Very dark gray, close to black */
+
+    /* Border radius */
     --radius: 0.5rem;
+    /* Small radius for rounded corners */
+
+    /* Chart colors */
     --chart-1: 12 76% 61%;
+    /* Chart color 1 (vivid pink) */
     --chart-2: 173 58% 39%;
+    /* Chart color 2 (teal) */
     --chart-3: 197 37% 24%;
+    /* Chart color 3 (dark blue) */
     --chart-4: 43 74% 66%;
+    /* Chart color 4 (light cyan) */
     --chart-5: 27 87% 67%;
+    /* Chart color 5 (light green) */
   }
 
+
   .dark {
+    /* Background color (dark gray) */
     --background: 0 0% 3.9%;
+    /* Very dark gray, close to black */
+
+    /* Foreground color (light gray) */
     --foreground: 0 0% 98%;
+    /* Very light gray, close to white */
+
+    /* Card background color (dark gray) */
     --card: 0 0% 3.9%;
+    /* Very dark gray, close to black */
+
+    /* Card foreground color (light gray) */
     --card-foreground: 0 0% 98%;
+    /* Very light gray, close to white */
+
+    /* Popover background color (dark gray) */
     --popover: 0 0% 3.9%;
+    /* Very dark gray, close to black */
+
+    /* Popover foreground color (light gray) */
     --popover-foreground: 0 0% 98%;
+    /* Very light gray, close to white */
+
+    /* Primary color (light gray) */
     --primary: 0 0% 98%;
+    /* Very light gray, close to white */
+
+    /* Primary foreground color (dark gray) */
     --primary-foreground: 0 0% 9%;
+    /* Very dark gray, close to black */
+
+    /* Secondary color (dark gray) */
     --secondary: 0 0% 14.9%;
+    /* Dark gray */
+
+    /* Secondary foreground color (light gray) */
     --secondary-foreground: 0 0% 98%;
+    /* Very light gray, close to white */
+
+    /* Muted color (dark gray) */
     --muted: 0 0% 14.9%;
+    /* Dark gray */
+
+    /* Muted foreground color (medium gray) */
     --muted-foreground: 0 0% 63.9%;
+    /* Medium gray */
+
+    /* Accent color (dark gray) */
     --accent: 0 0% 14.9%;
+    /* Dark gray */
+
+    /* Accent foreground color (light gray) */
     --accent-foreground: 0 0% 98%;
+    /* Very light gray, close to white */
+
+    /* Destructive color (bright orange) */
     --destructive: 0 62.8% 30.6%;
+    /* Bright orange */
+
+    /* Destructive foreground color (white) */
     --destructive-foreground: 0 0% 98%;
+    /* Very light gray, close to white */
+
+    /* Border color (dark gray) */
     --border: 0 0% 14.9%;
+    /* Dark gray */
+
+    /* Input background color (dark gray) */
     --input: 0 0% 14.9%;
+    /* Dark gray */
+
+    /* Ring color (light gray) */
     --ring: 0 0% 83.1%;
+    /* Light gray */
+
+    /* Chart colors */
     --chart-1: 220 70% 50%;
+    /* Light blue */
     --chart-2: 160 60% 45%;
+    /* Teal */
     --chart-3: 30 80% 55%;
+    /* Orange */
     --chart-4: 280 65% 60%;
+    /* Purple */
     --chart-5: 340 75% 55%;
+    /* Pink */
   }
+
 }
 
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
