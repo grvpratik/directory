@@ -20,7 +20,7 @@ const config = {
 		extend: {
 			fontFamily: {
 				heading: ["var(--font-bold)", ...fontFamily.sans],
-			
+				inter: ["var(--font-sans)", ...fontFamily.sans],
 			},
 			colors: {
 				border: "hsl(var(--border))",

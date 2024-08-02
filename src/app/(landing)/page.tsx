@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "src/components/ui/button";
 import { BookDashed, Box, Inbox } from "lucide-react";
 import Sidebar from "src/components/sidebar/Sidebar";
+import ProductCard from "src/components/card/ProductCard";
 
 
 const ROOT_PATH = "/";
@@ -39,20 +40,14 @@ const LandingPage = () => {
 						className=""
 						alt="Directory"
 					/>
-					<Button>submit request</Button>
+					<Button className=" rounded-full leading-relaxed ">Submit </Button>
 				</nav>
 				<div className="p-4  grid grid-cols-1  md:grid-cols-2 gap-4">
 					<h1 className="md:p-12 font-heading text-5xl items-center flex justify-center ">
 						Discover new saas for your business
 					</h1>
 					<div>
-						<Image
-							src="images/icon.svg"
-							height={320}
-							width={400}
-							className=""
-							alt="Directory"
-						/>
+						<ProductCard/>
 					</div>
 				</div>
 			</Sidebar>

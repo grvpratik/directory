@@ -1,8 +1,8 @@
-import React from 'react'
-import Sidebar from 'src/components/sidebar/Sidebar'
-import { sidebarItems } from '../(landing)/page'
+import React from "react";
+import Sidebar from "src/components/sidebar/Sidebar";
+import { sidebarItems } from "../page";
 const CategoryPage = ({ params }: { params: { id: string } }) => {
-    console.log(params.id)
+	console.log(params.id);
 	return (
 		<Sidebar items={sidebarItems} currentPath={params.id}>
 			<div>CategoryPage</div>
@@ -10,4 +10,4 @@ const CategoryPage = ({ params }: { params: { id: string } }) => {
 	);
 };
 
-export default CategoryPage
+export default CategoryPage;

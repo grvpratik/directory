@@ -37,19 +37,19 @@ const Sidebar: React.FC<SidebarProps> = ({ children, items, currentPath }) => {
 						</span>
 					</a>
 					<div className="space-y-2 text-sm px-1 my-3">All categories</div>
-					<ul className="space-y-2 font-medium">
+					<ul className="space-y-1 font-medium">
 						{items.map((item, index) => {
 							const isActive = currentPath === item.href; // Determine if the item is active
 							return (
 								<li key={index}>
 									<Link
 										href={item.href}
-										className={`flex items-center p-2  rounded-lg hover:bg-muted group ${
+										className={`flex items-center p-1.5  rounded-lg hover:bg-muted  duration-150 transition ${
 											isActive ? "bg-muted " : ""
-										}`} // Apply active class conditionally
+										}`} 
 									>
 										{item.icon}
-										<span className="ms-3">{item.label}</span>
+										<span className="ms-3  text-sm">{item.label}</span>
 										{/* {item.badgeText && (
 											<span
 												className={`inline-flex items-center justify-center px-2 ms-3 text-sm font-medium ${

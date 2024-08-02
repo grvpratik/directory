@@ -1,16 +1,16 @@
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import "src/styles/globals.css";
 
 import { ThemeProvider } from "src/providers/ThemeProvider";
 import Sidebar from "src/components/sidebar/Sidebar";
 import { boldSans } from "src/fonts/font";
 import { cn } from "src/lib/utils";
+import { inter } from "src/fonts/font";
 
 
 
-const inter = Inter({ subsets: ["latin"] });
   
 export const metadata: Metadata = {
 	title: "Directory",
@@ -28,8 +28,9 @@ export default function RootLayout({
 		<html lang="en">
 			<body
 				className={cn(
-					" font-mono",
+					" font-inter antialiased",
 					boldSans.variable,
+					inter.variable
 				)}
 			>
 				{" "}
