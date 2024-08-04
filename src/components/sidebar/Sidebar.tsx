@@ -66,7 +66,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, items, currentPath }) => {
 					</ul>
 				</div>
 			</aside>
-			<div className="sm:ml-64">{children}</div>
+			<div className="sm:ml-64 flex flex-col gap-4">{children}</div>
 		</main>
 	);
 };
