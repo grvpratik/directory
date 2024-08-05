@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { ScrollArea } from "../ui/scroll-area";
 
 interface SidebarItem {
 	href: string;
@@ -24,8 +25,8 @@ const Sidebar: React.FC<SidebarProps> = ({ children, items, currentPath }) => {
 				className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
 				aria-label="Sidebar"
 			>
-				<div className="h-full px-3 py-4 overflow-y-auto">
-					<a href="#" className="flex items-center gap-2 py-4">
+				<ScrollArea className="h-full px-3 py-4 ">
+					<a href="#" className="flex items-center gap-2">
 						<Image
 							src="/images/icon.svg" // Updated path to start with '/'
 							height={40}
@@ -64,7 +65,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, items, currentPath }) => {
 							);
 						})}
 					</ul>
-				</div>
+				</ScrollArea>
 			</aside>
 			<div className="sm:ml-64 flex flex-col gap-4">{children}</div>
 		</main>
