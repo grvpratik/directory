@@ -15,7 +15,7 @@ const LandingPage = () => {
 	return (
 		<>
 			<Sidebar items={sidebarItems} currentPath={ROOT_PATH}>
-				<nav className="flex justify-between p-2">
+				<nav className=" justify-between p-2 hidden md:flex">
 					<Image
 						src="images/icon.svg"
 						height={40}
