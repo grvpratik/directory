@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 const { fontFamily } = require("tailwindcss/defaultTheme");
 const config = {
 	darkMode: ["class"],
@@ -71,8 +71,18 @@ const config = {
 					from: { height: "var(--radix-accordion-content-height)" },
 					to: { height: "0" },
 				},
+				"shimmer": {
+					from: {
+						backgroundPosition: "0 0",
+					},
+					to: {
+						backgroundPosition: "-200% 0",
+					},
+				},
 			},
+
 			animation: {
+				"shimmer": "shimmer 1s linear infinite",
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 			},
@@ -81,4 +91,4 @@ const config = {
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 
-export default config
+export default config;

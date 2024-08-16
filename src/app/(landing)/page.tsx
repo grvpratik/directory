@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "src/components/ui/button";
-import { BookDashed, Box, Inbox, PlusIcon } from "lucide-react";
+import { BookDashed, Box, ImageIcon, Inbox, PlusIcon, SearchIcon, ShareIcon } from "lucide-react";
 import Sidebar from "src/components/sidebar/Sidebar";
 import ProductCard from "src/components/card/ProductCard";
 import { sidebarItems } from "src/components/sidebar/SidebarList";
+import { Input } from "src/components/ui/input";
+import SearchLanding from "src/components/search/SearchLanding";
 
 
 const ROOT_PATH = "/";
@@ -24,23 +26,31 @@ const LandingPage = () => {
 						alt="Directory"
 					/>
 					<Button className=" rounded-full  flex gap-1  leading-relaxed  text-base">
-						<PlusIcon className=" h-5 w-5" />
-						<span>Submit</span>{" "}
+						<PlusIcon className=" h-4 w-4" />
+						<span className=" text-base font-normal ">Submit</span>{" "}
 					</Button>
 				</nav>
-				<div className="p-4  grid grid-cols-1  md:grid-cols-2 gap-4 md:mx-6 lg:mx-8 mx-4  my-4 ">
-					<div className="md:p-12 items-center flex justify-center flex-col gap-4 lg:gap-6">
+				<div className="p-4  grid grid-cols-1  gap-2 md:mx-6 lg:mx-8 mx-4  my-3 ">
+					<div className="md:p-12 items-center flex justify-center flex-col gap-2 ">
 						<h1 className="font-heading text-4xl font-extrabold tracking-tight lg:text-5xl ">
-							Discover new saas for your business
+							Find the perfect tool for your need
 						</h1>{" "}
-						<span className=" text-base text-muted-foreground ">
+						{/* <span className=" text-base text-muted-foreground text-balance  ">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit
 							eligendi quam numquam voluptatibus libero. Perferendis, soluta ex
-						</span>
+						</span> */}
+						
+					
+								<SearchLanding/>
+					
 					</div>
-					<div>
+					{/* <div>
 						<ProductCard />
-					</div>
+					</div> */}
+				</div>
+				<div>
+					<div>latest release </div>
+					<div>top categoryes</div>
 				</div>
 				<main className=" grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3  gap-6 md:mx-6 lg:mx-8 mx-4">
 					<ProductCard />
