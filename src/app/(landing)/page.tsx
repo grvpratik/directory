@@ -25,13 +25,13 @@ const LandingPage = () => {
 						className=""
 						alt="Directory"
 					/>
-					<Button className=" rounded-full  flex gap-1  leading-relaxed  text-base">
+					{/* <Button className=" rounded-full  flex gap-1  leading-relaxed  text-base">
 						<PlusIcon className=" h-4 w-4" />
 						<span className=" text-base font-normal ">Submit</span>{" "}
-					</Button>
+					</Button> */}
 				</nav>
 				<div className="p-4  grid grid-cols-1  gap-2 md:mx-6 lg:mx-8 mx-4  my-3 ">
-					<div className="md:p-12 items-center flex justify-center flex-col gap-2 ">
+					<div className="md:p-12 items-center flex justify-center flex-col gap-4 ">
 						<h1 className="font-heading text-4xl font-extrabold tracking-tight lg:text-5xl ">
 							Find the perfect tool for your need
 						</h1>{" "}
