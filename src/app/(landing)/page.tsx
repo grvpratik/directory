@@ -1,17 +1,22 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "src/components/ui/button";
-import { BookDashed, Box, ImageIcon, Inbox, PlusIcon, SearchIcon, ShareIcon } from "lucide-react";
+import {
+	BookDashed,
+	Box,
+	ImageIcon,
+	Inbox,
+	PlusIcon,
+	SearchIcon,
+	ShareIcon,
+} from "lucide-react";
 import Sidebar from "src/components/sidebar/Sidebar";
 import ProductCard from "src/components/card/ProductCard";
 import { sidebarItems } from "src/components/sidebar/SidebarList";
 import { Input } from "src/components/ui/input";
 import SearchLanding from "src/components/search/SearchLanding";
 
-
 const ROOT_PATH = "/";
-
-
 
 const LandingPage = () => {
 	return (
@@ -31,17 +36,18 @@ const LandingPage = () => {
 					</Button> */}
 				</nav>
 				<div className="p-4  grid grid-cols-1  gap-2 md:mx-6 lg:mx-8 mx-4  my-3 ">
-					<div className="md:p-12 items-center flex justify-center flex-col gap-4 ">
-						<h1 className="font-heading text-4xl font-extrabold tracking-tight lg:text-5xl ">
-							Find the perfect tool for your need
-						</h1>{" "}
+					<div className="md:p-12 items-center flex justify-center flex-col gap-4 w-full">
+						<div>
+							<h1 className="font-heading text-4xl font-extrabold tracking-tight lg:text-5xl ">
+								Find the perfect tool for your need
+							</h1>
+						</div>{" "}
 						{/* <span className=" text-base text-muted-foreground text-balance  ">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit
 							eligendi quam numquam voluptatibus libero. Perferendis, soluta ex
 						</span> */}
 						
-					
-								<SearchLanding/>
+							<SearchLanding />
 					
 					</div>
 					{/* <div>
@@ -52,6 +58,7 @@ const LandingPage = () => {
 					<div>latest release </div>
 					<div>top categoryes</div>
 				</div>
+				<div className=" bg-slate-500 w-full flex"><input className="w-full"/></div>
 				<main className=" grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3  gap-6 md:mx-6 lg:mx-8 mx-4">
 					<ProductCard />
 					<ProductCard />

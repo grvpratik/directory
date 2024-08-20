@@ -7,7 +7,7 @@ const SearchLanding = () => {
 	const [loading, setLoading] = React.useState<boolean>(false);
 	return (
 		<>
-			<form className="mx-auto  relative overflow-hidden  min-w-sm w-[35rem] p-2 max-w-2xl flex  md:flex-row items-center justify-center border  rounded-full gap-2  focus-within:border-gray-300">
+			<form className="flex-1 w-full  relative overflow-hidden  min-w-sm p-2  flex  md:flex-row items-center justify-center border  rounded-full gap-2  focus-within:border-gray-300">
 				<input
 					className="ml-3 w-full h-full bg-transparent outline-none "
 					placeholder="here something"
