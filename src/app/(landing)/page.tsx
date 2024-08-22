@@ -44,7 +44,7 @@ const LandingPage = () => {
 						</div>{" "}
 						{/* <span className=" text-base text-muted-foreground text-balance  ">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit
-							eligendi quam numquam voluptatibus libero. Perferendis, soluta ex
+							eligendi quam numquam 
 						</span> */}
 						
 							<SearchLanding />
@@ -58,7 +58,7 @@ const LandingPage = () => {
 					<div>latest release </div>
 					<div>top categoryes</div>
 				</div>
-				<div className=" bg-slate-500 w-full flex"><input className="w-full"/></div>
+			
 				<main className=" grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3  gap-6 md:mx-6 lg:mx-8 mx-4">
 					<ProductCard />
 					<ProductCard />

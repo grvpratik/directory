@@ -7,13 +7,13 @@ const SearchLanding = () => {
 	const [loading, setLoading] = React.useState<boolean>(false);
 	return (
 		<>
-			<form className="flex-1 w-full  relative overflow-hidden  min-w-sm p-2  flex  md:flex-row items-center justify-center border  rounded-full gap-2  focus-within:border-gray-300">
+			<form className="flex-1 w-full  relative overflow-hidden  md:max-w-md min-w-sm p-2  flex  md:flex-row items-center justify-center border  rounded-full gap-2  focus-within:border-gray-300">
 				<input
-					className="ml-3 w-full h-full bg-transparent outline-none "
+					className="ml-3 w-full font-semibold text-sm bg-transparent outline-none h-5 "
 					placeholder="here something"
 				/>
 
-				<Button className="relative rounded-full bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%]  transition-colors  flex  items-center justify-center gap-1 hover:animate-shimmer">
+				<Button className="relative h-9 rounded-full bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%]  transition-colors  flex  items-center justify-center  gap-1 hover:animate-shimmer">
 					{loading && (
 						<div className="flex items-center justify-center h-3 w-3 absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 transition-all">
 							<svg
